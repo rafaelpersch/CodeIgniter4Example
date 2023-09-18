@@ -60,7 +60,7 @@ CREATE TABLE contas_pagar_receber (
     id SERIAL PRIMARY KEY,
     numero int NOT NULL,
     parcela int NOT NULL,
-    tipo_conta int NOT NULL, --ENUM
+    tipo_conta int NOT NULL, --ENUM 1=receber, 2=pagar
     descricao VARCHAR(255) NOT NULL,
     valor DECIMAL(10, 2) NOT NULL,
     data_vencimento DATE NOT NULL,

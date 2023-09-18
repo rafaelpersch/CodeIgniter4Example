@@ -4,6 +4,7 @@ CREATE TABLE usuarios (
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL --MD5 checksum 
 );
+--INSERT INTO usuarios (nome, email, senha) VALUES ('teste', 'teste@teste.com' , '565ff921f6662f5f1e230400e48d40d6');
 
 
 CREATE TABLE paises (

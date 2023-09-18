@@ -20,34 +20,34 @@ CREATE TABLE unidades_federativas (
     sigla VARCHAR(2) NOT NULL,
     codigo_ibge VARCHAR(255) NOT NULL
 );
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('AC', 'Acre');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('AL', 'Alagoas');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('AP', 'Amapá');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('AM', 'Amazonas');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('BA', 'Bahia');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('CE', 'Ceará');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('ES', 'Espírito Santo');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('GO', 'Goiás');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('MA', 'Maranhão');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('MT', 'Mato Grosso');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('MS', 'Mato Grosso do Sul');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('MG', 'Minas Gerais');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('PA', 'Pará');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('PB', 'Paraíba');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('PR', 'Paraná');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('PE', 'Pernambuco');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('PI', 'Piauí');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('RJ', 'Rio de Janeiro');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('RN', 'Rio Grande do Norte');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('RS', 'Rio Grande do Sul');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('RO', 'Rondônia');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('RR', 'Roraima');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('SC', 'Santa Catarina');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('SP', 'São Paulo');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('SE', 'Sergipe');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('TO', 'Tocantins');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('DF', 'Distrito Federal');
--- INSERT INTO unidades_federativas (sigla, nome) VALUES ('EX', 'Exterior');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('AC', 'Acre', '12');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('AL', 'Alagoas', '27');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('AP', 'Amapá', '16');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('AM', 'Amazonas', '13');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('BA', 'Bahia', '29');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('CE', 'Ceará', '23');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('ES', 'Espírito Santo', '32');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('GO', 'Goiás', '52');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('MA', 'Maranhão', '21');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('MT', 'Mato Grosso', '51');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('MS', 'Mato Grosso do Sul', '50');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('MG', 'Minas Gerais', '31');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('PA', 'Pará', '15');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('PB', 'Paraíba', '25');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('PR', 'Paraná', '41');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('PE', 'Pernambuco', '26');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('PI', 'Piauí', '22');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('RJ', 'Rio de Janeiro', '33');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('RN', 'Rio Grande do Norte', '24');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('RS', 'Rio Grande do Sul', '43');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('RO', 'Rondônia', '11');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('RR', 'Roraima', '14');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('SC', 'Santa Catarina', '42');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('SP', 'São Paulo', '35');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('SE', 'Sergipe', '28');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('TO', 'Tocantins', '17');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('DF', 'Distrito Federal', '53');
+-- INSERT INTO unidades_federativas (sigla, nome, codigo_ibge) VALUES ('EX', 'Exterior', '');
 
 
 CREATE TABLE cidades (

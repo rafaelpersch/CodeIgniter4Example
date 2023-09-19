@@ -19,6 +19,9 @@ class Home extends BaseController
         $user2->email= 'foo@example.com.br.co';
         $usuarioModel->save($user2);*/
 
+        $eee = new \App\Repositories\UsuarioRepository();
+        echo $eee->nene();
+
         return view('welcome_message');
     }
 }

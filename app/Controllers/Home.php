@@ -6,21 +6,35 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        //$usuario = new \App\Entities\Usuario();
+        $db = \Config\Database::connect();
 
-        $usuarioModel = new \App\Models\UsuarioModel();
+        //$db->transBegin();
 
-        $user = $usuarioModel->find(5);
-
-        var_dump($user->id);
+        $usuarioRepository = new \App\Repositories\UsuarioRepository($db);
 
         /*$user2       = new \App\Entities\Usuario();
-        $user2->nome = 'foo';
-        $user2->email= 'foo@example.com.br.co';
-        $usuarioModel->save($user2);*/
+        $user2->nome = 'fooxxx';
+        $user2->email= 'bhjgguygyuguygu';
+        $user2->senha= '222222';
+        $usuarioRepository->insert($user2);*/
 
-        $eee = new \App\Repositories\UsuarioRepository();
-        echo $eee->nene();
+        var_dump($usuarioRepository->selectById(9));
+        
+        var_dump($usuarioRepository->select());
+
+        //$db->transCommit();
+
+        //$db->transRollback();
+
+        /*
+        if ($this->db->transStatus() === false) {
+            $this->db->transRollback();
+        } else {
+            $this->db->transCommit();
+        }
+        */
+
+        $db->close();
 
         return view('welcome_message');
     }

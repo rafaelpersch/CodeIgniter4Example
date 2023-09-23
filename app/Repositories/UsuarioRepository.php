@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Repositories;
 
 class UsuarioRepository
@@ -59,7 +61,7 @@ class UsuarioRepository
 
         foreach ($result->getResult() as $row) {
             $usuario        = new \App\Entities\Usuario();
-            $usuario->id    = $row->id;
+            $usuario->id    = intval($row->id);
             $usuario->nome  = $row->nome;
             $usuario->email = $row->email;
             return $usuario;
@@ -78,7 +80,7 @@ class UsuarioRepository
 
         foreach ($result->getResult() as $row) {
             $usuario        = new \App\Entities\Usuario();
-            $usuario->id    = $row->id;
+            $usuario->id    = intval($row->id);
             $usuario->nome  = $row->nome;
             $usuario->email = $row->email;
             

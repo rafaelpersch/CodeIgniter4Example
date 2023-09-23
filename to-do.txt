@@ -1,3 +1,2 @@
-- .env
-- filter (session)
+- filter (session, login)
 - transaction

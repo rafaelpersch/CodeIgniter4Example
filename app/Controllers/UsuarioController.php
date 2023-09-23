@@ -8,67 +8,66 @@ use App\Controllers\BaseController;
 
 class UsuarioController extends BaseController
 {
+    private $db;
+
+    public function __construct() 
+    {
+        $this->db = \Config\Database::connect();
+    }
+
     public function index()
     {
-        $db = \Config\Database::connect();
-
-        $usuarioRepository = new \App\Repositories\UsuarioRepository($db);
+        $usuarioRepository = new \App\Repositories\UsuarioRepository($this->db);
         
         $data['usuarios'] = $usuarioRepository->select();
 
-        $db->close();
-
-        return view('usuarios/index', $data);
+        return view('/usuarios/index', $data);
     }
 
     public function create()
     {
         $data['usuario'] = new \App\Entities\Usuario();
 
-        return view('usuarios/register', $data);
+        return view('/usuarios/register', $data);
     }
 
-    /*public function store()
+    public function store()
     {
-        $model = new ProdutoModel();
+        $usuarioRepository = new \App\Repositories\UsuarioRepository($this->db);
 
-        $data = [
-            'nome' => $this->request->getPost('nome'),
-            'descricao' => $this->request->getPost('descricao'),
-            'preco' => $this->request->getPost('preco'),
-        ];
+        $usuario        = new \App\Entities\Usuario();
+        $usuario->id    = intval($this->request->getPost('id'));
+        $usuario->nome  = $this->request->getPost('nome');
+        $usuario->email = $this->request->getPost('email');
+        $usuario->senha = $this->request->getPost('senha');
 
-        $model->insert($data);
+        if ($usuario->id > 0)
+        {
+            $usuarioRepository->update($usuario);
+        }
+        else
+        {
+            $usuarioRepository->insert($usuario);
+        }
 
         return redirect()->to('/usuarios');
-    }*/
+    }
 
     public function edit($id = null)
     {
-        $db = \Config\Database::connect();
-
-        $usuarioRepository = new \App\Repositories\UsuarioRepository($db);
+        $usuarioRepository = new \App\Repositories\UsuarioRepository($this->db);
 
         $data['usuario'] = $usuarioRepository->selectById((intval($id)));
 
-        $db->close();
-
-        return view('usuarios/register', $data);
+        return view('/usuarios/register', $data);
     }
 
     public function delete($id = null)
     {
-        /*$db = \Config\Database::connect();
-
-        $usuarioRepository = new \App\Repositories\UsuarioRepository($db);
+        $usuarioRepository = new \App\Repositories\UsuarioRepository($this->db);
         
         $usuarioRepository->delete(intval($id));
 
-        $db->close();*/
-
-
-        echo base_url('usuarios');
-
-        //return redirect()->to(base_url('usuarios'));
+        return redirect()->to('/usuarios');
     }
 }

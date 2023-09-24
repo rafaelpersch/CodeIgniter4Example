@@ -1,5 +1,5 @@
 - transaction
 - xdebug
-- menu superior
+- menu superior / sair...
 - filter (session, login)
 - tarefas...

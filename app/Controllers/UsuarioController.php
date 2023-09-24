@@ -50,6 +50,8 @@ class UsuarioController extends BaseController
             $usuarioRepository->insert($usuario);
         }
 
+        //$_SESSION['user'] = (array)$usuario;
+
         return redirect()->to('/usuarios');
     }
 

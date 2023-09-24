@@ -20,9 +20,9 @@ class Home extends BaseController
         $user2->senha= '222222';
         $usuarioRepository->insert($user2);*/
 
-        var_dump($usuarioRepository->selectById(9));
+        //var_dump($usuarioRepository->selectById(9));
         
-        var_dump($usuarioRepository->select());
+        //var_dump($usuarioRepository->select());
 
         //$db->transCommit();
 
@@ -35,6 +35,8 @@ class Home extends BaseController
             $this->db->transCommit();
         }
         */
+
+        //echo print_r($_SESSION['user']);
 
         $db->close();
 

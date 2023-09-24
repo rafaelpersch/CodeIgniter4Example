@@ -7,7 +7,8 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 
-$routes->get('/usuarios', 'UsuarioController::index', ['filter' => 'login-filter']);
+$routes->get('/usuarios', 'UsuarioController::index');
+//$routes->get('/usuarios', 'UsuarioController::index', ['filter' => 'login-filter']);
 $routes->get('/usuarios/create', 'UsuarioController::create');
 $routes->post('/usuarios/store', 'UsuarioController::store');
 $routes->get('/usuarios/edit/(:num)', 'UsuarioController::edit/$1');
